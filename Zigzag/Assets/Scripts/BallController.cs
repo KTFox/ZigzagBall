@@ -7,7 +7,7 @@ using TMPro;
 public class BallController : MonoBehaviour
 {
     //Variables
-    public float moveSpeed = 8f;
+    public float moveSpeed = 6f;
 
     bool hasMoved;
     bool gameOver;
