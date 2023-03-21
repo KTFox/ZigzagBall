@@ -7,7 +7,8 @@ using TMPro;
 public class BallController : MonoBehaviour
 {
     //Variables
-    public float moveSpeed = 6f;
+    [SerializeField] float defaultSpeed = 4f;
+    [SerializeField] float currentSpeed;
 
     bool hasMoved;
     bool gameOver;
@@ -21,18 +22,45 @@ public class BallController : MonoBehaviour
 
     void Update()
     {
+        StartRun();
+        FallOutOfPlatform();
+        SwitchDirection();
+        SpeedUp();
+    }
+
+    //Methods
+    public void SwitchDirection()
+    {
+        if (Input.GetMouseButtonDown(0) && !gameOver)
+        {
+            if (rb.velocity.x > 0)
+            {
+                rb.velocity = new Vector3(0, 0, currentSpeed);
+            }
+            else if (rb.velocity.z > 0)
+            {
+                rb.velocity = new Vector3(currentSpeed, 0, 0);
+            }
+        }     
+    }
+
+    public void StartRun()
+    {
         if (!hasMoved)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                rb.velocity = new Vector3(moveSpeed, 0, 0);
+                rb.velocity = new Vector3(defaultSpeed, 0, 0);
 
                 GameManager.instance.StartGame();
 
                 hasMoved = true;
             }
         }
+    }
 
+    public void FallOutOfPlatform()
+    {
         if (!Physics.Raycast(transform.position, Vector3.down, 1f))
         {
             rb.velocity = new Vector3(0, -25f, 0);
@@ -41,23 +69,19 @@ public class BallController : MonoBehaviour
 
             GameManager.instance.GameOver();
         }
-
-        if (Input.GetMouseButtonDown(0) && !gameOver)
-        {
-            SwitchDirection();
-        }
     }
 
-    //Methods
-    public void SwitchDirection()
+    public void SpeedUp()
     {
-        if (rb.velocity.x > 0)
+        int currentScore = ScoreManager.instance.score;
+
+        if (currentScore <= 1000)
         {
-            rb.velocity = new Vector3(0, 0, moveSpeed);
+            currentSpeed = defaultSpeed;
         }
-        else if(rb.velocity.z > 0)
+        else if (currentScore > 1000)
         {
-            rb.velocity = new Vector3(moveSpeed, 0, 0);
+            currentSpeed = defaultSpeed + (currentScore/1000);
         }
     }
 }

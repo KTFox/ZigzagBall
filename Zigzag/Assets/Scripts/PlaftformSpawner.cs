@@ -31,7 +31,7 @@ public class PlaftformSpawner : MonoBehaviour
     //Methods   
     public void StartSpawn()
     {
-        InvokeRepeating(nameof(SpawnPlatform), 0, 0.2f);
+        InvokeRepeating(nameof(SpawnPlatform), 0, 0.3f);
     }
 
     public void StopSpawn()
