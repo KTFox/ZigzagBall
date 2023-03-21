@@ -6,9 +6,9 @@ public class TriggerChecker : MonoBehaviour
 {
     void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Ball")
+        if (other.CompareTag("Ball"))
         {
-            Invoke("FallDown", 0.05f);
+            Invoke(nameof(FallDown), 0.05f);
         }
     }
 

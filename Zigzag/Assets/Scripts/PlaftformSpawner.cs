@@ -9,8 +9,6 @@ public class PlaftformSpawner : MonoBehaviour
 
     [SerializeField] GameObject plaftform;
     [SerializeField] GameObject diamond;
-    public bool gameOver;
-    bool gameStarted;
 
     Vector3 lastPos;
     float size;
@@ -31,15 +29,16 @@ public class PlaftformSpawner : MonoBehaviour
     }
 
     //Methods   
+    public void StartSpawn()
+    {
+        InvokeRepeating(nameof(SpawnPlatform), 0, 0.2f);
+    }
+
     public void StopSpawn()
     {
         CancelInvoke("SpawnPlatform");
     }
-    public void StartSpawn()
-    {
-        InvokeRepeating("SpawnPlatform", 0, 0.2f);
-    }
-
+   
     void SpawnPlatform()
     {
         int rand = Random.Range(0, 2);

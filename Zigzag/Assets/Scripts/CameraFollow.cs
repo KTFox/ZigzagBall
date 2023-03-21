@@ -8,9 +8,8 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] float smoothSpeed;
 
-    Vector3 offset;
-
     public bool gameOver;
+    Vector3 offset;
 
     //Event funcitons
     void Start()
@@ -27,7 +26,7 @@ public class CameraFollow : MonoBehaviour
     }
 
     //Methods
-    void BallFollow()
+    public void BallFollow()
     {
         Vector3 velocity = Vector3.zero;
 

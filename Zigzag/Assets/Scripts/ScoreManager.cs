@@ -22,36 +22,27 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         score = 0;
-
-        PlayerPrefs.SetInt("score", score);
+        highScore = PlayerPrefs.GetInt("highScore", 0);
     }
 
     //Methods
     void IncreaseScore()
     {
         score += 10;
+
+        if (score > highScore)
+        {
+            PlayerPrefs.SetInt("highScore", score);
+        }
     }
 
     public void StartScore()
     {
-        InvokeRepeating("IncreaseScore", 1f, 0.2f);
+        InvokeRepeating(nameof(IncreaseScore), 1f, 0.2f);
     }
 
     public void StopScore()
     {
         CancelInvoke("IncreaseScore");
-        PlayerPrefs.SetInt("score", score);
-
-        if (PlayerPrefs.HasKey("highScore"))
-        {
-            if (score > PlayerPrefs.GetInt("highScore"))
-            {
-                PlayerPrefs.SetInt("highScore", score);
-            }
-        }
-        else
-        {
-            PlayerPrefs.SetInt("highScore", score);
-        }
     }
 }

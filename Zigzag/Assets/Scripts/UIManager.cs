@@ -29,12 +29,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        highScore.text = "High score: " + PlayerPrefs.GetInt("highScore").ToString();
-    }
-    
-    void Update()
-    {
-
+        highScore.text = "High score: " + ScoreManager.instance.highScore.ToString();
     }
     
     //Methods
@@ -48,8 +43,8 @@ public class UIManager : MonoBehaviour
     public void GameOver()
     {
         gameOverHolderPanel.SetActive(true);
-        score.text = PlayerPrefs.GetInt("score").ToString();
-        highScore1.text = PlayerPrefs.GetInt("highScore").ToString();
+        score.text = ScoreManager.instance.score.ToString();
+        highScore1.text = ScoreManager.instance.highScore.ToString();
     }
 
     public void ReStart()
