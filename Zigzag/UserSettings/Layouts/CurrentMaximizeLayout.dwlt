@@ -86,7 +86,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -99,20 +99,20 @@ MonoBehaviour:
       y: 21
       width: 926.7999
       height: 358.4
-    m_Scale: {x: 0.56, y: 0.56}
-    m_Translation: {x: 463.39996, y: 179.2}
+    m_Scale: {x: 0.5928125, y: 0.5928125}
+    m_Translation: {x: 463.39996, y: 179.20001}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -827.49994
-      y: -320
-      width: 1654.9999
-      height: 640
+      x: -781.6974
+      y: -302.28784
+      width: 1563.3948
+      height: 604.5757
     m_MinimalGUI: 1
-  m_defaultScale: 0.56
+  m_defaultScale: 0.5928125
   m_LastWindowPixelSize: {x: 1158.4999, y: 474.25}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -177,9 +177,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 64180000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: bc31fbff1afbffff22fbffff2efbffff32fbffffb6570000
+      m_ExpandedIDs: 32fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.007185424, y: -0.03599454, z: -0.00024273356, w: 0.9993602}
     speed: 2
-    m_Value: {x: -0.00718518, y: -0.03599332, z: -0.0002427253, w: 0.9993262}
+    m_Value: {x: 0.0071854237, y: 0.03599454, z: 0.00024273356, w: -0.99936014}
   m_Size:
     m_Target: 296.75607
     speed: 2
@@ -775,22 +775,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity projects\ZigzagBallReposition\Zigzag
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f8580000
-    m_LastClickedID: 22776
-    m_ExpandedIDs: 00000000e4580000
+    m_SelectedIDs: f4580000
+    m_LastClickedID: 22772
+    m_ExpandedIDs: 00000000ec580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -818,7 +818,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 60}
     m_SelectedIDs: d2620000
     m_LastClickedID: 25298
-    m_ExpandedIDs: 00000000e4580000
+    m_ExpandedIDs: 00000000ec580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -843,8 +843,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 64180000
-    m_LastClickedInstanceID: 6244
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000be620000
     m_RenameOverlay:
@@ -893,8 +893,8 @@ MonoBehaviour:
     y: 0
     width: 380.80005
     height: 722.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}

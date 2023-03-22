@@ -31,7 +31,7 @@ public class PlaftformSpawner : MonoBehaviour
     //Methods   
     public void StartSpawn()
     {
-        InvokeRepeating(nameof(SpawnPlatform), 0, 0.3f);
+        InvokeRepeating(nameof(SpawnPlatform), 0, 0.01f);
     }
 
     public void StopSpawn()
@@ -41,15 +41,20 @@ public class PlaftformSpawner : MonoBehaviour
    
     void SpawnPlatform()
     {
-        int rand = Random.Range(0, 2);
+        GameObject[] platforms = GameObject.FindGameObjectsWithTag("Platform");
 
-        if (rand == 0)
+        if (platforms.Length <= 30)
         {
-            SpawnX();
-        }
-        else if (rand == 1)
-        {
-            SpawnZ();
+            int rand = Random.Range(0, 2);
+
+            if (rand == 0)
+            {
+                SpawnX();
+            }
+            else if (rand == 1)
+            {
+                SpawnZ();
+            }
         }
     }
     
