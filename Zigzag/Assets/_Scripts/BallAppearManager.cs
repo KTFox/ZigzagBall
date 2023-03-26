@@ -8,10 +8,20 @@ public class BallAppearManager : MonoBehaviour
     [SerializeField] Material[] ballColors;
     int selectedColor;
 
+    //Event functions
+    void Start()
+    {
+        selectedColor = PlayerPrefs.GetInt("SelectedColor");
+        gameObject.GetComponent<Renderer>().material = ballColors[selectedColor];
+    }
+
+    //Methods
     public void NextColor()
     {
         selectedColor = (selectedColor + 1) % ballColors.Length;
         gameObject.GetComponent<Renderer>().material = ballColors[selectedColor];
+
+        PlayerPrefs.SetInt("SelectedColor", selectedColor);
     }
 
     public void BeforeColor()
@@ -24,5 +34,7 @@ public class BallAppearManager : MonoBehaviour
         }
 
         gameObject.GetComponent<Renderer>().material = ballColors[selectedColor];
+
+        PlayerPrefs.SetInt("SelectedColor", selectedColor);
     }
 }
