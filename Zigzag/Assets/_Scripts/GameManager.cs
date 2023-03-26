@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
         AudioManager.instance.StopSound("SoundTrack");
         UIManager.instance.GameOver();
         ScoreManager.instance.StopScore();
-        PlaftformSpawner.instance.StopSpawn();
 
         Camera.main.GetComponent<CameraFollow>().gameOver = true;
     }

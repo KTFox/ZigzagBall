@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TriggerChecker : MonoBehaviour
-{
+{   
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Ball"))
         {
-            Invoke(nameof(FallDown), 0.05f);
+            FallDown();
         }
     }
 
@@ -16,6 +16,12 @@ public class TriggerChecker : MonoBehaviour
     {
         GetComponentInParent<Rigidbody>().useGravity = true;
         GetComponentInParent<Rigidbody>().isKinematic = false;
-        Destroy(transform.parent.gameObject, 1f);
+
+        Invoke(nameof(SpawnNewPlatform), 1f);     
+    }
+
+    void SpawnNewPlatform()
+    {
+        PlaftformSpawner.instance.SpawnPlatform();
     }
 }

@@ -31,30 +31,24 @@ public class PlaftformSpawner : MonoBehaviour
     //Methods   
     public void StartSpawn()
     {
-        InvokeRepeating(nameof(SpawnPlatform), 0, 0.01f);
-    }
-
-    public void StopSpawn()
-    {
-        CancelInvoke("SpawnPlatform");
-    }
-   
-    void SpawnPlatform()
-    {
-        GameObject[] platforms = GameObject.FindGameObjectsWithTag("Platform");
-
-        if (platforms.Length <= 30)
+        for(int i = 0; i < 30; i++)
         {
-            int rand = Random.Range(0, 2);
+            SpawnPlatform();
+        }
+    }
 
-            if (rand == 0)
-            {
-                SpawnX();
-            }
-            else if (rand == 1)
-            {
-                SpawnZ();
-            }
+   
+    public void SpawnPlatform()
+    {
+        int rand = Random.Range(0, 2);
+
+        if (rand == 0)
+        {
+            SpawnX();
+        }
+        else if (rand == 1)
+        {
+            SpawnZ();
         }
     }
     
@@ -65,7 +59,7 @@ public class PlaftformSpawner : MonoBehaviour
         pos.x += size;
         lastPos = pos;
 
-        Instantiate(plaftform, pos, Quaternion.identity);
+        ObjectPooler.instance.SpawnFromPool("Platform", pos, Quaternion.identity);
 
         //Spawn diamond
         int rand = Random.Range(0, 4);
@@ -83,7 +77,7 @@ public class PlaftformSpawner : MonoBehaviour
         pos.z += size;
         lastPos = pos;
 
-        Instantiate(plaftform, pos, Quaternion.identity);
+        ObjectPooler.instance.SpawnFromPool("Platform", pos, Quaternion.identity);
 
         //Spawn diamond
         int rand = Random.Range(0, 4);
