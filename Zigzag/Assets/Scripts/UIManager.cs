@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject startPanel;
     public GameObject gameOverHolderPanel;
-    public GameObject clickText;
+    public GameObject buttons;
     public GameObject runningScore;
     public TextMeshProUGUI score;
     public TextMeshProUGUI highScore;
@@ -40,7 +40,7 @@ public class UIManager : MonoBehaviour
     //Methods
     public void GameStart()
     {
-        clickText.SetActive(false);
+        buttons.SetActive(false);
         runningScore.SetActive(true);
         startPanel.GetComponent<Animator>().Play("PanelUp");
     }

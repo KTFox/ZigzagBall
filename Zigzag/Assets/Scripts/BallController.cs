@@ -10,7 +10,6 @@ public class BallController : MonoBehaviour
     [SerializeField] float defaultSpeed = 4f;
     [SerializeField] float currentSpeed;
 
-    bool hasMoved;
     bool gameOver;
     Rigidbody rb;
 
@@ -22,7 +21,6 @@ public class BallController : MonoBehaviour
 
     void Update()
     {
-        StartRun();
         FallOutOfPlatform();
         SwitchDirection();
         SpeedUp();
@@ -45,18 +43,9 @@ public class BallController : MonoBehaviour
     }
 
     public void StartRun()
-    {
-        if (!hasMoved)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                rb.velocity = new Vector3(defaultSpeed, 0, 0);
-
-                GameManager.instance.StartGame();
-
-                hasMoved = true;
-            }
-        }
+    {       
+        rb.velocity = new Vector3(defaultSpeed, 0, 0);
+        GameManager.instance.StartGame();
     }
 
     public void FallOutOfPlatform()
