@@ -38,4 +38,9 @@ public class GameManager : MonoBehaviour
 
         Camera.main.GetComponent<CameraFollow>().gameOver = true;
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
