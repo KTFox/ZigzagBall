@@ -1,8 +1,9 @@
-using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 using System;
-using UnityEngine.Audio;
+using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class AudioSystem : MonoBehaviour
 {
     [System.Serializable]
     public class Sound
@@ -21,7 +22,7 @@ public class AudioManager : MonoBehaviour
 
 
     //Variables
-    public static AudioManager instance;
+    public static AudioSystem instance;
     public Sound[] sounds;
 
     //Event functions
@@ -32,7 +33,7 @@ public class AudioManager : MonoBehaviour
             instance = this;
         }
 
-        foreach(Sound s in sounds)
+        foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
 

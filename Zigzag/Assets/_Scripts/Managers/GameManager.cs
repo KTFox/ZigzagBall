@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     //Methods
     public void StartGame()
     {
-        AudioManager.instance.PlaySound("SoundTrack");
+        AudioSystem.instance.PlaySound("SoundTrack");
         UIManager.instance.GameStart();
         ScoreManager.instance.StartScore();
         PlaftformSpawner.instance.StartSpawn();
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        AudioManager.instance.StopSound("SoundTrack");
+        AudioSystem.instance.StopSound("SoundTrack");
         UIManager.instance.GameOver();
         ScoreManager.instance.StopScore();
 

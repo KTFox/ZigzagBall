@@ -12,7 +12,7 @@ public class Diamond : MonoBehaviour
     {
         if (other.CompareTag("Ball"))
         {
-            AudioManager.instance.PlaySound("DiamondCollection");
+            AudioSystem.instance.PlaySound("DiamondCollection");
 
             ScoreManager.instance.score += 50;
 
