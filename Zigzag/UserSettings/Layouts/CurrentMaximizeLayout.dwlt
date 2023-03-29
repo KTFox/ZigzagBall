@@ -226,9 +226,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e8aa0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d6d5feff2ae6feffc2fffeff2835ffffee36fffff849ffffea4dffff0457ffff3086ffffce8effffe491ffff3a93ffff9493ffff4494ffff849cffff48abffff70abffffd0adffff5eb5ffffdcc1ffff0ac3ffff22fbffff32fbffff8a570000b6580000c65f0000c6940000e894000028a50000a0a50000aaab000098ad000024ae00002aaf0000e4b000005ab30000
+      m_ExpandedIDs: 4a8dfdffd6d5feff2ae6feffc2fffeff2835ffffee36fffff849ffffea4dffff0457ffff3086ffffce8effffe491ffff3a93ffff9493ffff4494ffff849cffff48abffff70abffffd0adffff5eb5ffffdcc1ffff0ac3ffff22fbffff32fbffff8a570000b6580000c65f0000c6940000e894000028a50000a0a50000aaab000098ad000024ae00002aaf0000e4b000005ab30000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -560,9 +560,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: 0.5298312, y: -0.7937417, z: -0.4063487}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: 0.5298312, y: -0.7937417, z: -0.4063487}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -609,13 +609,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.17626826, y: 0.036910646, z: -0.006573987, w: 0.98367333}
+    m_Target: {x: 0.22859594, y: 0.07440082, z: -0.017483445, w: 0.97056276}
     speed: 2
-    m_Value: {x: -0.17626826, y: -0.03691065, z: 0.0065739877, w: -0.9836734}
+    m_Value: {x: 0.22858575, y: 0.074397504, z: -0.017482666, w: 0.9705195}
   m_Size:
-    m_Target: 4.2720017
+    m_Target: 4.374661
     speed: 2
-    m_Value: 4.2720017
+    m_Value: 4.374661
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -711,22 +711,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/_Scripts/Environment
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/_Scripts/Environment
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity Projects\ZigzagBall_Repo\Zigzag
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c4590000
-    m_LastClickedID: 22980
-    m_ExpandedIDs: 000000007a590000
+    m_SelectedIDs: ca590000
+    m_LastClickedID: 22986
+    m_ExpandedIDs: 000000007a590000b8590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -779,9 +779,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: e8aa0000
-    m_LastClickedInstanceID: 43752
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300003899000066600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

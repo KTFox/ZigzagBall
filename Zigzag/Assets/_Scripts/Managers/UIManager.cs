@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        runningScore.GetComponent<TextMeshProUGUI>().text = "Score: " + ScoreManager.instance.score.ToString();
+        runningScore.GetComponent<TextMeshProUGUI>().text = ScoreManager.instance.score.ToString();
     }
     
     public void GameStart()

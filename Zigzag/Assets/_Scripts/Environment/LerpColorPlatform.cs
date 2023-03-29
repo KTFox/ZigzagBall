@@ -3,7 +3,6 @@ using UnityEngine;
 public class LerpColorPlatform : MonoBehaviour
 {
     [SerializeField] BallController ball;
-
     [SerializeField] float speed;
     [SerializeField] int indexColor;
     [SerializeField] [Range(0f, 1f)] float timeLerp = 0.7f;
