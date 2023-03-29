@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5591224931861770681}
   - component: {fileID: 5591224931861770680}
   - component: {fileID: 5591224931861770679}
+  - component: {fileID: 7848686736824391045}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Platform
@@ -115,6 +116,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7848686736824391045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5591224931861770682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e2a6af9f137bc4087958f19514349e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 0}
+  timeLerp: 1
+  speed: 0
+  indexColor: 0
+  myColors:
+  - {r: 0, g: 1, b: 0.95051575, a: 0}
+  - {r: 1, g: 0, b: 0.80404997, a: 0}
+  - {r: 0.06792453, g: 0.0690788, b: 0.0754717, a: 0}
+  - {r: 0.8773585, g: 0.54158324, b: 0.12746526, a: 0}
+  - {r: 0.11924169, g: 0.8207547, b: 0.27427286, a: 0}
+  - {r: 1, g: 0.08965105, b: 0.050943315, a: 0}
+  - {r: 0.05098039, g: 0.07535987, b: 1, a: 0}
 --- !u!1 &5591224932640723589
 GameObject:
   m_ObjectHideFlags: 0

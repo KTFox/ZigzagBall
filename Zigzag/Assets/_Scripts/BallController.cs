@@ -1,19 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
 public class BallController : MonoBehaviour
 {
-    //Variables
-    [SerializeField] float defaultSpeed = 4f;
-    [SerializeField] float currentSpeed;
+    private bool gameOver;
+    private Rigidbody rb;
 
-    bool gameOver;
-    Rigidbody rb;
+    public float defaultSpeed = 4f;
+    public float currentSpeed;
 
-    //Event functions
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -26,7 +22,6 @@ public class BallController : MonoBehaviour
         SpeedUp();
     }
 
-    //Methods
     public void SwitchDirection()
     {
         if (Input.GetMouseButtonDown(0) && !gameOver)
