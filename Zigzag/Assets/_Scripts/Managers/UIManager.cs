@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,9 +5,7 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    //Variables
     public static UIManager instance;
-
     public GameObject startPanel;
     public GameObject gameOverHolderPanel;
     public GameObject buttons;
@@ -18,7 +14,6 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI highScore;
     public TextMeshProUGUI highScore1;
 
-    //Event functions
     void Awake()
     {
         if (instance == null)
@@ -37,7 +32,6 @@ public class UIManager : MonoBehaviour
         runningScore.GetComponent<TextMeshProUGUI>().text = "Score: " + ScoreManager.instance.score.ToString();
     }
     
-    //Methods
     public void GameStart()
     {
         buttons.SetActive(false);

@@ -1,16 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-//GameManager will controll: UI, score, camera, platformspawner
 public class GameManager : MonoBehaviour
 {
-    //Variables
     public static GameManager instance;
-
     public bool gameOver;
 
-    //Event functions
     void Awake()
     {
         if (instance == null)
@@ -19,7 +13,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //Methods
     public void StartGame()
     {
         AudioSystem.instance.PlaySound("SoundTrack");

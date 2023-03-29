@@ -1,21 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BallAppearManager : MonoBehaviour
 {
-    //Variables
     [SerializeField] Material[] ballColors;
-    int selectedColor;
+    
+    private int selectedColor;
 
-    //Event functions
     void Start()
     {
         selectedColor = PlayerPrefs.GetInt("SelectedColor");
         gameObject.GetComponent<Renderer>().material = ballColors[selectedColor];
     }
 
-    //Methods
     public void NextColor()
     {
         selectedColor = (selectedColor + 1) % ballColors.Length;

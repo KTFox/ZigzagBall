@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using System;
 using UnityEngine;
 
@@ -19,13 +17,9 @@ public class AudioSystem : MonoBehaviour
         [HideInInspector] public AudioSource source;
     }
 
-
-
-    //Variables
     public static AudioSystem instance;
     public Sound[] sounds;
 
-    //Event functions
     void Awake()
     {
         if (instance == null)
@@ -44,7 +38,6 @@ public class AudioSystem : MonoBehaviour
         }
     }
 
-    //Methods
     public void PlaySound(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);

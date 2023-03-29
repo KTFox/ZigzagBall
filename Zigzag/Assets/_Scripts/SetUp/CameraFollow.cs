@@ -1,17 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    //Variables
     [SerializeField] Transform target;
     [SerializeField] float smoothSpeed;
 
-    public bool gameOver;
-    Vector3 offset;
+    private Vector3 offset;
 
-    //Event funcitons
+    public bool gameOver;
+
     void Start()
     {
         offset = transform.position - target.position;
@@ -25,7 +22,6 @@ public class CameraFollow : MonoBehaviour
         }
     }
 
-    //Methods
     public void BallFollow()
     {
         Vector3 velocity = Vector3.zero;

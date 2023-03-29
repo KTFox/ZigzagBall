@@ -1,19 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlaftformSpawner : MonoBehaviour
 {
-    //Variables
     public static PlaftformSpawner instance;
 
     [SerializeField] GameObject plaftform;
     [SerializeField] GameObject diamond;
 
-    Vector3 lastPos;
-    float size;
+    private Vector3 lastPos;
+    private float size;
 
-    //Event functions
     void Awake()
     {
         if (instance == null)
@@ -27,8 +23,7 @@ public class PlaftformSpawner : MonoBehaviour
         lastPos = transform.position;
         size = plaftform.transform.localScale.x;
     }
-
-    //Methods   
+  
     public void StartSpawn()
     {
         for(int i = 0; i < 30; i++)
@@ -36,8 +31,7 @@ public class PlaftformSpawner : MonoBehaviour
             SpawnPlatform();
         }
     }
-
-   
+  
     public void SpawnPlatform()
     {
         int rand = Random.Range(0, 2);

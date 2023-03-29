@@ -1,16 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    //Variables
     public static ScoreManager instance;
-
     public int score;
     public int highScore;
 
-    //Event functions
     void Awake()
     {
         if (instance == null)
@@ -25,7 +20,6 @@ public class ScoreManager : MonoBehaviour
         highScore = PlayerPrefs.GetInt("highScore", 0);
     }
 
-    //Methods
     void IncreaseScore()
     {
         score += 10;

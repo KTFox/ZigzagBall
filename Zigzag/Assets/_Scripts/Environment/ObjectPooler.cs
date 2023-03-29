@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,15 +11,10 @@ public class ObjectPooler : MonoBehaviour
         public int size;
     }
 
-
-
-    //Variables
     public static ObjectPooler instance;
-
     public List<Pool> pools;
     public Dictionary<string, Queue<GameObject>> poolDictionary;
 
-    //Event functions
     void Awake()
     {
         if (instance == null)
@@ -48,7 +42,6 @@ public class ObjectPooler : MonoBehaviour
         }
     }
 
-    //Methods
     public void SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
     {       
         GameObject objectToSpawn = poolDictionary[tag].Dequeue();
