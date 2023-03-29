@@ -6,12 +6,18 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
+    
+    [Header("Start State")]
     public GameObject startPanel;
-    public GameObject gameOverHolderPanel;
     public GameObject buttons;
-    public GameObject runningScore;
-    public TextMeshProUGUI score;
     public TextMeshProUGUI highScore;
+
+    [Header("Run State")]
+    public GameObject runningScore;
+
+    [Header("GameOver State")]
+    public GameObject gameOverHolderPanel;    
+    public TextMeshProUGUI score; 
     public TextMeshProUGUI highScore1;
 
     void Awake()
